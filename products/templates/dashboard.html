@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard Statistics</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        .dashboard {
+            padding: 30px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 30px;
+            color: #222;
+        }
+
+        .cards {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .card {
+            background-color: white;
+            width: 220px;
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .card h2 {
+            margin: 0 0 8px;
+            font-size: 25px;
+            color: #222;
+        }
+
+        .card p {
+            margin: 0;
+            font-size: 16px;
+            color: #666;
+        }
+
+        @media (max-width: 900px) {
+            .cards {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <h1>Dashboard Statistics</h1>
+
+        <div class="cards">
+
+            <div class="card">
+                <h2>{{ total_products }}</h2>
+                <p>Total Products</p>
+            </div>
+
+            <div class="card">
+                <h2>{{ total_categories }}</h2>
+                <p>Total Categories</p>
+            </div>
+
+            <div class="card">
+                <h2>₹{{ total_value }}</h2>
+                <p>Total Product Value</p>
+            </div>
+
+            <div class="card">
+                <h2>₹{{ highest_price }}</h2>
+                <p>Highest Price</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
